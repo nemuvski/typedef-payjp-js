@@ -1,0 +1,22 @@
+{
+  "name": "type-payjp-js",
+  "version": "1.0.0",
+  "description": "payjp.js v2の型定義を提供する。",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "global.d.ts"
+  ],
+  "dependencies": {
+    "payjp": "^2.0.8"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "format": "prettier --write --ignore-path .gitignore './**/*.ts'",
+    "typecheck": "tsc --noEmit"
+  }
+}
