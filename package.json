@@ -3,6 +3,23 @@
   "version": "1.0.0",
   "description": "payjp.js v2の型定義を提供する。",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/nemuvski/type-payjp-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nemuvski/type-payjp-js"
+  },
+  "bugs": {
+    "url": "https://github.com/nemuvski/type-payjp-js/issues"
+  },
+  "keywords": [
+    "typescript",
+    "type",
+    "payjp",
+    "payjpjs"
+  ],
   "types": "index.d.ts",
   "files": [
     "index.d.ts",
