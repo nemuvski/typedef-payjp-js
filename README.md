@@ -14,12 +14,23 @@ https://pay.jp/docs/payjs のドキュメントを元に作成しています。
 
 ## 🏄 利用方法
 
+### インストール
+
+```bash
+# npm
+npm install --save-dev typedef-payjp-js
+
+# yarn
+yarn add -D typedef-payjp-js
+```
+
+
 ### windowオブジェクトに `Payjp` の型情報を追加
 
 任意の場所に `global.d.ts` といったファイルを作成し、次の内容を記述します。
 
 ```ts
-/// <reference types="type-payjp-js/global" />
+/// <reference types="typedef-payjp-js/global" />
 ```
 
 次のコードのような形で、参照できます。
