@@ -1,5 +1,5 @@
 {
-  "name": "type-payjp-js",
+  "name": "typedef-payjp-js",
   "version": "1.0.0",
   "description": "payjp.js v2の型定義を提供する。",
   "license": "MIT",
