@@ -9,7 +9,7 @@
   "homepage": "https://github.com/nemuvski/type-payjp-js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nemuvski/type-payjp-js"
+    "url": "https://github.com/nemuvski/type-payjp-js.git"
   },
   "bugs": {
     "url": "https://github.com/nemuvski/type-payjp-js/issues"
