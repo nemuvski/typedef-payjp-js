@@ -25,12 +25,12 @@
     "index.d.ts",
     "global.d.ts"
   ],
-  "dependencies": {
-    "payjp": "^2.0.8"
+  "peerDependencies": {
+    "payjp": "^2.0.0"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "format": "prettier --write --ignore-path .gitignore './**/*.ts'",
