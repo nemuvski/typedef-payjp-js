@@ -24,6 +24,10 @@ npm install --save-dev typedef-payjp-js
 yarn add -D typedef-payjp-js
 ```
 
+#### NOTE
+
+`v1.1` 以降をインストールする際は、 [payjp](https://www.npmjs.com/package/payjp) を別途インストールしてください。(既にインストールしている場合は不要です)
+
 
 ### windowオブジェクトに `Payjp` の型情報を追加
 
