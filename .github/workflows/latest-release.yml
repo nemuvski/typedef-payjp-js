@@ -1,0 +1,31 @@
+name: LatestRelease
+
+on:
+  # Run a workflow when a release has been released
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#release
+  release:
+    types: [released]
+
+jobs:
+  latest-release:
+    # Do not run if the release is a prerelease or draft
+    # @see https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#release
+    if: ${{ github.event.release.prerelease == false && github.event.release.draft == false }}
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+      - name: publish
+        run: npm publish --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
