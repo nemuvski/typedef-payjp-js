@@ -78,6 +78,7 @@ namespace PayjpJs {
       phone: string
       tenant: string
     }>
+    three_d_secure?: boolean;
   }
 
   export interface Payjp {
