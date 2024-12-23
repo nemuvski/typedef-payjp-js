@@ -55,7 +55,7 @@ namespace PayjpJs {
         code: 'incomplete_error' | 'invalid_number' | 'invalid_expiry_year_past' | 'invalid_expiry_month_past'
       }
       brand: CardBrand
-    }) => void
+    }) => void,
   ) => void
   export type ElementEventListenerOnReady = (event: 'ready', listener: (e: { elementType: TypeField }) => void) => void
   export type ElementEventListenerOnFocus = (event: 'focus', listener: (e: { elementType: TypeField }) => void) => void
