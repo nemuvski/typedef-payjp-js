@@ -66,29 +66,46 @@ namespace PayjpJs {
     ElementEventListenerOnBlur
 
   export type TokenOptions = {
-    card: Partial<{
-      address_state: string
-      address_city: string
-      address_line1: string
-      address_line2: string
-      address_zip: string
-      country: string
-      name: string
-      email: string
-      phone: string
-      tenant: string
-    }>
+    card: {
+      address_state?: string
+      address_city?: string
+      address_line1?: string
+      address_line2?: string
+      address_zip?: string
+      country?: string
+      name?: string
+      email?: string
+      phone?: string
+    }
+    tenant?: string
     three_d_secure?: boolean
+  }
+
+  export type ThreeDSecureDialogWindowFeatures = {
+    width?: number
+    height?: number
+    top?: number
+    left?: number
+    popup?: boolean
+  }
+
+  export type ThreeDSecureDialogOptions = {
+    timeout?: number
+    windowFeatures?: ThreeDSecureDialogWindowFeatures
   }
 
   export interface Payjp {
     getPublicKey: () => string
     elements: (options?: { locale?: Locale }) => PayjpElements
-    createToken: (element: PayjpElement, options?: TokenOptions) => Promise<Partial<PayjpError> & Token>
+    createToken: (
+      element: PayjpElement,
+      data?: TokenOptions,
+      options?: ThreeDSecureDialogOptions,
+    ) => Promise<Partial<PayjpError> & Token>
     retrieveAvailability: (options?: {
       tenant?: string
     }) => Promise<Partial<PayjpError> & { card_types_supported: Array<CardBrand>; livemode: boolean }>
-    openThreeDSecureDialog: (objectId: string, timeoutMilliSec?: number) => Promise<void>
+    openThreeDSecureDialog: (objectId: string, options?: number | ThreeDSecureDialogOptions) => Promise<void>
   }
 
   export interface PayjpElements {
