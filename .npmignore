@@ -5,10 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .DS_Store
-examples/
 
 .editorconfig
-.prettierignore
-.prettierrc.js
+biome.jsonc
 tsconfig.json
-yarn.lock
+package-lock.json
+.node-version

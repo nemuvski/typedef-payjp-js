@@ -10,7 +10,7 @@ declare global {
       options?: {
         locale?: PayjpJs.Locale
         threeDSecureWorkflow?: 'subwindow' | 'redirect'
-      }
+      },
     ) => PayjpJs.Payjp
   }
 }

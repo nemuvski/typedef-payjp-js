@@ -1,0 +1,38 @@
+name: Code Check
+
+on:
+  push:
+    tags-ignore:
+      - "*"
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  lint-and-format:
+    name: Lint and Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: biomejs/setup-biome@v2
+      - name: Biome Version
+        run: biome -V
+      - name: format
+        run: biome format
+      - name: lint
+        run: biome lint
+
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+          cache: 'npm'
+      - run: npm ci
+      - name: type check
+        run: npm run typecheck

@@ -2,7 +2,6 @@ node_modules/
 
 # Editor/IDE
 .idea/
-.vscode/
 
 # Logs
 *.log
@@ -12,4 +11,3 @@ yarn-error.log*
 
 # Misc
 .DS_Store
-examples/
