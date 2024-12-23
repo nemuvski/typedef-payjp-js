@@ -5,6 +5,12 @@ import type PayjpJs from './index'
  */
 declare global {
   interface Window {
-    Payjp?: (publicKey: string, options?: { locale?: PayjpJs.Locale }) => PayjpJs.Payjp
+    Payjp?: (
+      publicKey: string,
+      options?: {
+        locale?: PayjpJs.Locale
+        threeDSecureWorkflow?: 'subwindow' | 'redirect'
+      }
+    ) => PayjpJs.Payjp
   }
 }

@@ -1,4 +1,4 @@
-import type { Token, PayjpError } from 'payjp'
+import type { PayjpError, Token } from 'payjp'
 
 /**
  * payjp.js v2の型定義
@@ -74,7 +74,11 @@ namespace PayjpJs {
       address_zip: string
       country: string
       name: string
+      email: string
+      phone: string
+      tenant: string
     }>
+    three_d_secure?: boolean
   }
 
   export interface Payjp {
