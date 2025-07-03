@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.0
+### Changes
+- iframe関連の対応
+  - Payjp()のオプションの `threeDSecureWorkflow` に `"iframe"` を追加
+  - `payjp.openThreeDSecureIframe()` を追加
+
+
 ## 1.2.0
 ### Changes
 - 3D secure関連の対応
