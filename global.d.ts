@@ -9,7 +9,7 @@ declare global {
       publicKey: string,
       options?: {
         locale?: PayjpJs.Locale
-        threeDSecureWorkflow?: 'subwindow' | 'redirect'
+        threeDSecureWorkflow?: 'iframe' | 'subwindow' | 'redirect'
       },
     ) => PayjpJs.Payjp
   }

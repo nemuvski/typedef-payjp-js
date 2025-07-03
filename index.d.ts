@@ -105,6 +105,7 @@ namespace PayjpJs {
     retrieveAvailability: (options?: {
       tenant?: string
     }) => Promise<Partial<PayjpError> & { card_types_supported: Array<CardBrand>; livemode: boolean }>
+    openThreeDSecureIframe: (objectId: string) => Promise<void>
     openThreeDSecureDialog: (objectId: string, options?: number | ThreeDSecureDialogOptions) => Promise<void>
   }
 
