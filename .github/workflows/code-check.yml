@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: biomejs/setup-biome@c016c38f26f2c4a6eb3662679143614a254263fd # v2.3.0
+      - uses: biomejs/setup-biome@454fa0d884737805f48d7dc236c1761a0ac3cc13 # v2.6.0
       - name: Biome Version
         run: biome -V
       - name: format
