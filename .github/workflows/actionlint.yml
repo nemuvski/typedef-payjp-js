@@ -1,0 +1,19 @@
+name: GitHub Action Lint
+
+on:
+  push:
+    paths:
+      - ".github/**/*.yml"
+      - ".github/**/*.yaml"
+
+jobs:
+  secretlint:
+    name: Secretlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: lint
+        run: |
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/v1.7.7/scripts/download-actionlint.bash)
+          ./actionlint
+        shell: bash
