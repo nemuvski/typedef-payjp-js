@@ -29,8 +29,8 @@
     "payjp": "^2.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
-    "typescript": "^5.8.3"
+    "@biomejs/biome": "2.2.6",
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "lint": "biome lint ./",
