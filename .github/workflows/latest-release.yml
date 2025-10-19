@@ -26,6 +26,4 @@ jobs:
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
       - name: publish
-        run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
