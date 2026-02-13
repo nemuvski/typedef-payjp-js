@@ -12,7 +12,7 @@ jobs:
     # @see https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#release
     if: ${{ github.event.release.prerelease == false && github.event.release.draft == false }}
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     permissions:
       contents: read
