@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.4.0
+### Changes
+- payjpのpeerDependenciesにv3.0.0を追記
+
+
 ## 1.3.0
 ### Changes
 - iframe関連の対応
