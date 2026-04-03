@@ -16,6 +16,6 @@ jobs:
           persist-credentials: false
       - name: lint
         run: |
-          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/v1.7.7/scripts/download-actionlint.bash)
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/v1.7.9/scripts/download-actionlint.bash)
           ./actionlint
         shell: bash
