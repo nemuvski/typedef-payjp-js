@@ -49,7 +49,7 @@ if (window.Payjp) {
 ### 型定義の利用
 
 ```ts
-import PayjpJs from "type-payjp-js"
+import type PayjpJs from "typedef-payjp-js"
 
 // 必要に応じて、変数の型としてご利用ください
 const cardBrand: PayjpJs.CardBrand = 'Visa'
