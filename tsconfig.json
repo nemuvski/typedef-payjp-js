@@ -2,12 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "noEmit": false,
     "allowJs": false,
     "declaration": true,
-    "downlevelIteration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

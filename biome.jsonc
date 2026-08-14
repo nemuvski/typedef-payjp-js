@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "includes": ["**"] },
+  "files": { "ignoreUnknown": false, "includes": ["**", "!example"] },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -15,24 +15,6 @@
     "includes": ["**", "!**/package.json", "!**/package-lock.json", "!**/tsconfig.json"]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "style": {
-        "noParameterAssign": "error",
-        "useAsConstAssertion": "error",
-        "useDefaultParameterLast": "error",
-        "useEnumInitializers": "error",
-        "useSelfClosingElements": "error",
-        "useSingleVarDeclarator": "error",
-        "noUnusedTemplateLiteral": "error",
-        "useNumberNamespace": "error",
-        "noInferrableTypes": "error",
-        "noUselessElse": "error"
-      }
-    }
-  },
   "javascript": {
     "formatter": {
       "jsxQuoteStyle": "single",
